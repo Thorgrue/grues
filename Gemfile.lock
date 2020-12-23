@@ -72,6 +72,7 @@ GEM
       warden (~> 1.2.3)
     erubi (1.10.0)
     ffi (1.14.2)
+    geocoder (1.6.4)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.8.5)
@@ -191,6 +192,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   devise
+  geocoder
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)

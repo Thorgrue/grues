@@ -1,5 +1,5 @@
-class CitiesController < ApplicationController
+class GruesController < ApplicationController
 
-  def map
+  def index
   end
 end
