@@ -3,11 +3,17 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 import '../stylesheets/application.scss';
+import initMapbox from '../plugins/init_mapbox';
 
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+
+
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+})
 
 
 
