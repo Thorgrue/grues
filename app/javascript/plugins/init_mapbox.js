@@ -9,14 +9,8 @@ const fitMapToMarkers = (map, markers) => {
   markers.forEach((marker) => {
     const popup = new mapboxgl.Popup().setHTML(marker.infoWindow); // add this
     // Create a HTML element for your custom marker
-    const element = document.createElement('div');
-    element.className = 'marker';
-    element.style.backgroundImage = `url('${marker.image_url}')`;
-    element.style.backgroundSize = 'contain';
-    element.style.width = '25px';
-    element.style.height = '25px';
     // Pass the element as an argument to the new marker
-    new mapboxgl.Marker(element)
+    new mapboxgl.Marker()
       .setLngLat([marker.lng, marker.lat])
       .setPopup(popup)
       .addTo(map);
@@ -26,7 +20,7 @@ const initMapbox = () => {
   const mapElement = document.querySelector('#map')
   if (mapElement == null)
     return
-  const markersData = JSON.parse(mapElement.dataset.markers)
+  const markers = JSON.parse(mapElement.dataset.markers)
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   const map = new mapboxgl.Map({
     container: 'map',
@@ -37,6 +31,6 @@ const initMapbox = () => {
   map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
                                     mapboxgl: mapboxgl }));
   fitMapToMarkers(map, markers);
-  addMarkers(map, markers)
+  addMarkersToMap(map, markers)
 }
 export default initMapbox

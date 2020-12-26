@@ -1,2 +1,4 @@
-<h2><%= grues.name %></h2>
-<p><%= grues.address %></p>
+<% @grues.each do |grue| %>
+  <h2><%= grue.name %></h2>
+  <p><%= grue.address %></p>
+<% end %>
