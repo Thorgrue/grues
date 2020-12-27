@@ -8,7 +8,7 @@ class GruesController < ApplicationController
       {
         lat: grue.latitude,
         lng: grue.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { grue: grue })
+        infoWindow: render_to_string(partial: 'info_window', locals: { grue: grue })
       }
     end
   end

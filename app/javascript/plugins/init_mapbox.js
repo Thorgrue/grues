@@ -24,7 +24,7 @@ const initMapbox = () => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/pdunleav/cjofefl7u3j3e2sp0ylex3cyb', // <-- use your own!
+    style: 'mapbox://styles/thortoto/ckj6eekdceepx19qtsfwnhrpo', // <-- use your own!
     center: [-74.5, 40], // starting position [lng, lat]
     zoom: 9 // starting zoom
   });
