@@ -46,5 +46,6 @@ class GruesController < ApplicationController
   end
 
   def grue_params
+    params.require(:grue).permit(:name, :height, :typeof, :address, :photo)
   end
 end

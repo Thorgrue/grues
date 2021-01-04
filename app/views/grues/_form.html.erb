@@ -1,0 +1,8 @@
+<%= simple_form_for @grue do |f| %>
+    <%= f.input :name, label: 'Nom'  %>
+    <%= f.input :height, label: 'Hauteur'  %>
+    <%= f.input :address, label: 'Localisation'  %>
+    <%= f.input :typeof, collection: Grue::TYPEOF, label: 'Type de grue'  %>
+    <!-- <%= f.input :photo, as: :file %> -->
+    <%= f.button :submit, 'Create this crane', class: 'btn-form'  %>
+<% end %>
