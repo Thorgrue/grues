@@ -13,7 +13,7 @@ user_admin.save!
 
 puts 'Creating cranes...'
 
-titan_jaune = Grue.create(name: 'La grue Titan jaune', typeof: 'GME', height: '43m', address: 'Quai Quais de la Fosse, Nantes')
+titan_jaune = Grue.create(name: 'La grue Titan jaune', typeof: 'GME', height: '43m', address: 'Quai de la Fosse, Nantes')
 # titan_jaune = File.open("app/assets/images/lyon_vaise.jpeg")
 # titan_jaune.photo.attach(io: source, filename: 'lyon_vaise.jpeg', content_type: 'image/jpeg')
 titan_jaune.save!

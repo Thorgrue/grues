@@ -1,7 +1,19 @@
-<h1>You'll find here all our cranes</h1>
 <div class="container mx-auto my-10">
-  <div id="map"
-       style="width: 100%; height: 600px;"
-       data-markers="<%= @markers.to_json %>"
-       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  <center>You'll find here all our cranes</center>
+
+  <% @grues.each do |grue| %>
+  <div class="">
+  <h2 class="font-bold"><%= link_to grue.name, grue_path(grue) %></h2>
+  <%= grue.typeof %>
+  </div>
+  <% end %>
+
+  <h2 class="italic"><%= link_to 'Add a new crane', new_grue_path %></h2>
 </div>
+
+  <div class="container mx-52 my-10">
+    <div id="map"
+         style="width: 80%; height: 500px;"
+         data-markers="<%= @markers.to_json %>"
+         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  </div>

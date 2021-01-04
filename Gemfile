@@ -49,3 +49,4 @@ gem 'amazing_print', '~> 1.2', '>= 1.2.2'
 gem 'devise'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'geocoder'
+gem 'simple_form'
