@@ -1,6 +1,13 @@
 <div class="container mx-auto my-10">
   <center><h1>Here is your crane yeay !</h1></center>
   <%= @grue.name %>
+  <%= @grue.height %>
+  <%= @grue.typeof %>
+  <%= @grue.address %>
 
+  <%= link_to 'Destroy this crane',
+              grue_path(@grue),
+              method: :delete,
+              data: { confirm: "Are you sure?" }   %>
   <%= link_to 'Back', grues_path %>
 </div>

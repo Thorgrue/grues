@@ -1,5 +1,5 @@
 class GruesController < ApplicationController
-  before_action :set_grue, only: [:show, ]
+  before_action :set_grue, only: [:show, :destroy]
 
   def index
     @grues = Grue.all
@@ -36,7 +36,9 @@ class GruesController < ApplicationController
   def update
   end
 
-  def delete
+  def destroy
+    @grue.destroy
+    redirect_to grues_path
   end
 
   private
